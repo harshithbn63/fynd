@@ -23,7 +23,28 @@ This repository contains the completed assessment for the Fynd AI Intern positio
 - **Premium UI/UX**: Designed a dual-dashboard system with full theme support (Light/Dark mode) and centered, responsive components.
 - **AI-Driven Insights**: Integrated automated summarization and actionable recommendations for business administrators.
 
-## 🛠️ Setup & Execution
-Each task contains its own setup guide:
-- [Task 1 Setup](./task1/README.md)
-- [Task 2 Setup](./task2/README.md)
+## 🛠️ Combined Setup & Vercel Deployment
+
+### **Separate Projects Deployment (Recommended)**
+
+#### **1. Backend (FastAPI)**
+- **Root Directory**: `task2/backend`
+- **Framework Preset**: `Other`
+- **Build & Output Settings**: 
+    - Build Command: (Leave Default/Empty)
+    - Output Directory: (Leave Default/Empty)
+    - Install Command: `pip install -r requirements.txt`
+- **Envs**: `GROQ_API_KEY`, `SUPABASE_URL`, `SUPABASE_ANON_KEY`.
+
+#### **2. Frontend (Next.js)**
+- **Root Directory**: `task2/frontend`
+- **Framework Preset**: `Next.js`
+- **Build & Output Settings**: 
+    - Build Command: `next build`
+    - Output Directory: `.next`
+    - Install Command: `npm install`
+- **Envs**: `NEXT_PUBLIC_API_URL` (Set to your Backend Vercel URL).
+
+## 📁 Documentation & Reports
+- **[Assessment Report](./Assessment_Report.md)**: Detailed analysis of Task 1 experiments and Task 2 architecture.
+- **[Task 2 Walkthrough](./walkthrough.md)**: Visual guide to the feedback system features.
